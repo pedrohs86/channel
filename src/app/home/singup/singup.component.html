@@ -1,0 +1,16 @@
+<div fxLayout="column" fxLayoutAlign="space-evenly center" style="margin-top: 3rem;">
+  <mat-card>
+    <div class="title">
+      <mat-card-title>DADOS CADASTRAIS</mat-card-title>
+    </div>
+    <mat-card-content>
+      <app-dados-pessoais [form]="form"></app-dados-pessoais>
+      <app-endereco [form]="form"></app-endereco>
+      <app-dados-contato [form]="form"></app-dados-contato>
+      <app-dados-conta [form]="form"></app-dados-conta >
+    </mat-card-content>
+    <mat-card-actions style="justify-content: center; display: flex;">
+      <button mat-raised-button color="primary" style="width: 100%; height: 4rem;"><p style="font-size: 1.8rem; margin: 0;">Cadastrar</p></button>
+    </mat-card-actions>
+  </mat-card>
+</div>

@@ -1,0 +1,23 @@
+<mat-card-title style="margin-top: 1rem;"> Dados de contato </mat-card-title>
+<form [formGroup]="form">
+  <div fxLayout="row" fxLayoutAlign="space-between center">
+    <mat-form-field style="width: 45%;">
+      <mat-label>Telefone Celular</mat-label>
+      <input matInput required formControlName="celular" autocomplete="off" appMask type="text" [mask]="'(99) 99999-9999'" maxlength="15">
+      <mat-hint>
+        Ex: DDD + Telefone
+      </mat-hint>
+      <mat-error id="error-cnpj-required" *ngIf="form.get('celular')?.getError('required')">
+        Informe um telefone celular válido
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field style="width: 45%;">
+      <mat-label>Telefone Fixo</mat-label>
+      <input matInput formControlName="fixo" autocomplete="off" appMask type="text" [mask]="'(99) 9999-9999'" maxlength="14">
+      <mat-hint>
+        Ex: DDD + Telefone
+      </mat-hint>
+    </mat-form-field>
+  </div>
+</form>

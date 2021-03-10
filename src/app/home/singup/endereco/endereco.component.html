@@ -1,0 +1,103 @@
+<mat-card-title style="margin-top: 1rem;"> Endereço </mat-card-title>
+<form [formGroup]="form">
+  <div fxLayout="row" fxLayoutAlign="space-between center">
+    <mat-form-field style="width: 45%;">
+      <mat-label>Identificação</mat-label>
+      <input matInput required formControlName="identificacao" autocomplete="off" type="text" maxlength="50">
+      <mat-hint>
+        ex: Escritório, Casa, etc.
+      </mat-hint>
+      <mat-error id="error-cnpj-required" *ngIf="form.get('identificacao')?.getError('required')">
+        Informe a indentificação
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field style="width: 45%;">
+      <mat-label>Nome e Sobrenome do destinatário</mat-label>
+      <input matInput formControlName="nomeSobrenome" autocomplete="off" maxlength="50">
+    </mat-form-field>
+  </div>
+
+  <div fxLayout="row" fxLayoutAlign="space-between center">
+    <mat-form-field style="width: 45%;">
+      <mat-label>CEP</mat-label>
+      <input matInput required formControlName="cep" autocomplete="off" appMask type="text" [mask]="'99999-999'" maxlength="9">
+      <mat-error>
+      CEP inválido
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field style="width: 45%;">
+      <mat-label>Endereço</mat-label>
+      <input matInput formControlName="endereco" autocomplete="off" maxlength="50" required>
+      <mat-error>
+      Insira um Endereço
+      </mat-error>
+    </mat-form-field>
+  </div>
+
+  <div fxLayout="row" fxLayoutAlign="space-between center">
+    <mat-form-field style="width: 45%;">
+      <mat-label>Número</mat-label>
+      <input matInput formControlName="numero" autocomplete="off" maxlength="50" required>
+      <mat-error>
+      Insira o Número da residência
+    </mat-error>
+    </mat-form-field>
+
+    <mat-form-field style="width: 45%;">
+      <mat-label>Complemento</mat-label>
+      <input matInput formControlName="complemento" autocomplete="off" maxlength="50" required>
+      <mat-hint>
+        Informar, por exemplo, o número do apto, bloco, sítio, etc. Deve ser algo que informe exatamente onde mora.
+      </mat-hint>
+      <mat-error>
+      Insira um Complemento
+      </mat-error>
+    </mat-form-field>
+  </div>
+
+
+  <div fxLayout="row" fxLayoutAlign="space-between center">
+    <mat-form-field style="width: 45%;">
+      <mat-label>Bairro</mat-label>
+      <input matInput formControlName="bairro" autocomplete="off" maxlength="50" required>
+      <mat-error>
+      Insira um Bairro
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field style="width: 45%;">
+      <mat-label>Cidade</mat-label>
+      <input matInput formControlName="cidade" autocomplete="off" maxlength="50" required>
+      <mat-error>
+      Insira uma Cidade
+      </mat-error>
+    </mat-form-field>
+</div>
+
+  <div fxLayout="row" fxLayoutAlign="space-between center">
+    <mat-form-field style="width: 45%;">
+      <mat-label>Estado</mat-label>
+      <mat-select formControlName="estado" required>
+        <mat-option *ngFor="let estado of estados"  [value]="estado.label">
+          {{estado.label}}
+        </mat-option>
+      </mat-select>
+      <mat-error>
+      Selecione um Estado
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field style="width: 45%;">
+      <mat-label>Referência</mat-label>
+      <input matInput formControlName="referencia" autocomplete="off" maxlength="50" required>
+      <mat-hint>
+        Informar local próximo, por exemplo, um mercadinho, igreja, rua principal, etc. Um local conhecido na área onde mora.
+      </mat-hint>
+      <mat-error>
+      Insira uma Referência
+      </mat-error>
+    </mat-form-field>
+  </div>
+</form>

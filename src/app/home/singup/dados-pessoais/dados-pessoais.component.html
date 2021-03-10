@@ -1,0 +1,99 @@
+<mat-card-title style="margin-top: 1rem;"> Dados pessoais </mat-card-title>
+<form [formGroup]="form">
+
+  <mat-radio-group class="radio-group-tipo" formControlName="tipo">
+    <mat-radio-button class="radio-button-tipo" value="FISICA">Pessoa Física</mat-radio-button>
+    <mat-radio-button class="radio-button-tipo" value="JURIDICA">Pessoa Jurídica</mat-radio-button>
+  </mat-radio-group>
+
+  <mat-form-field>
+    <mat-label>Nome</mat-label>
+    <input matInput required formControlName="nome" autocomplete="off" type="text" maxlength="50">
+    <mat-error id="error-cnpj-required">
+      Insira um nome
+    </mat-error>
+  </mat-form-field>
+
+  <div *ngIf=" fisica;else juridica">
+    <mat-form-field style="width: 100%;">
+      <mat-label>Sobrenome</mat-label>
+      <input matInput required formControlName="sobrenome" autocomplete="off" type="text" maxlength="50">
+      <mat-error id="error-cnpj-required">
+        Insira seu Sobrenome
+      </mat-error>
+    </mat-form-field>
+
+    <div fxLayout="row" fxLayoutAlign="space-between center">
+      <mat-form-field style="width: 45%;">
+        <mat-label>Data de Nascimento</mat-label>
+        <input matInput required formControlName="dataNascimento" autocomplete="off" type="text" appMask [mask]="'99/99/9999'" minlength="6" maxlength="10">
+        <mat-error id="error-cnpj-required">
+          Data inválida
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field style="width: 45%;">
+        <mat-label>Sexo</mat-label>
+        <mat-select formControlName="estado" required>
+          <mat-option value="feminino">
+            Feminino
+          </mat-option>
+          <mat-option value="masculino">
+            Masculino
+          </mat-option>
+          <mat-option value="outros">
+            Outros
+          </mat-option>
+        </mat-select>
+        <mat-error>
+        Selecione um Estado
+        </mat-error>
+      </mat-form-field>
+    </div>
+
+    <div fxLayout="row" fxLayoutAlign="space-between center">
+      <mat-form-field style="width: 45%;">
+        <mat-label>CPF</mat-label>
+        <input matInput required formControlName="cpf" autocomplete="off" type="text" maxlength="14" appMask [mask]="'999.999.999-99'">
+        <mat-error id="error-cnpj-required" *ngIf="form.get('cpf')?.invalid">
+          CPF inválido
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field style="width: 45%;">
+        <mat-label>RG</mat-label>
+        <input matInput formControlName="rg" autocomplete="off" type="text" maxlength="15">
+      </mat-form-field>
+    </div>
+  </div>
+
+  <ng-template #juridica>
+    <div fxLayout="row" fxLayoutAlign="space-between center">
+      <mat-form-field style="width: 45%;">
+        <mat-label>Razão Social</mat-label>
+        <input matInput required formControlName="razaoSocial" autocomplete="off" type="text" maxlength="50">
+        <mat-error id="error-cnpj-required" *ngIf="form.get('razaoSocial')?.invalid">
+          Insira a razão social da sua empresa.
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field style="width: 45%;">
+        <mat-label>CNPJ</mat-label>
+        <input matInput formControlName="cnpj" autocomplete="off" type="text" maxlength="18" appMask [mask]="'99.999.999/9999-99'" required>
+        <mat-error>
+          CNPJ inválido
+        </mat-error>
+      </mat-form-field>
+    </div>
+
+    <mat-form-field style="width: 45%;">
+      <mat-label>Inscrição Estadual</mat-label>
+      <input matInput required formControlName="inscricaoEstadual" autocomplete="off" type="text" maxlength="100">
+      <mat-error id="error-cnpj-required" *ngIf="form.get('inscricaoEstadual')?.invalid">
+        Insira a inscrição estadual da sua empresa.
+      </mat-error>
+    </mat-form-field>
+
+  </ng-template>
+
+</form>

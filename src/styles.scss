@@ -1,1 +1,206 @@
-/* You can add global styles to this file, and also import other style files */
+/***********************Tema Global Customizado***********************/
+
+@import '~@angular/material/theming';
+
+@include mat-core();
+
+$custom-primary: mat-palette($mat-orange, 800);
+$custom-accent: mat-palette($mat-orange, 800);
+$custom-warn: mat-palette($mat-red, 500);
+
+$custom-theme: mat-light-theme($custom-primary, $custom-accent, $custom-warn);
+
+@include angular-material-theme($custom-theme);
+
+$custom-typography: mat-typography-config(
+  $font-family: '"Open Sans", sans-serif',
+  $input: mat-typography-level(16px, 1.125, 400)
+);
+
+@include mat-core($custom-typography);
+
+.custom-ripple {
+  .mat-ripple-element {
+    background-color: rgba(0, 200, 83, 0.1) !important;
+  }
+}
+
+.mat-progress-bar {
+  height: 10px !important;
+}
+
+
+.mat-simple-snackbar {
+  font-size: 16px;
+}
+
+.mat-snack-bar-container {
+  color: white;
+  opacity: 1;
+}
+
+body {
+  background-color: #fafafa;
+}
+
+.mat-form-field {
+  font: 400 16px/1.2 "Open Sans", sans-serif;
+}
+/***********************Tema Global Customizado END***********************/
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+@mixin color-primary {
+  //color: rgba(76, 175, 80, 1) !important;
+}
+
+/* Global Width Table */
+table {
+  width: 100%;
+}
+
+.float-button {
+  top: auto;
+  right: 3.065rem;
+  bottom: 2.44rem;
+  left: auto;
+  position: fixed;
+  z-index: 1;
+}
+
+
+/* Mat Header Global */
+.mat-header-cell {
+  color: black;
+}
+
+::-webkit-scrollbar {
+  width: 8px; /* remove scrollbar space */
+  background: #00000029; /* optional: just make scrollbar invisible */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #BDBDBD;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+  border-radius: 9px;
+}
+
+/* Cor Label */
+.mat-form-field {
+  .mat-form-field-label {
+    //color: #000000 !important;
+    opacity: 0.8;
+  }
+}
+
+.mat-form-field-invalid {
+  .mat-form-field-label {
+    color: #F44336 !important;
+  }
+
+  .mat-input-element {
+    color: #F44336 !important;
+  }
+}
+
+/* Cor borda botões */
+.mat-stroked-button:not([disabled]) {
+  border-color: currentColor !important;
+}
+
+.mat-card {
+  padding-top: 30px !important;
+}
+
+.mat-row:hover,
+.mat-row:focus {
+  background: #f5f5f5;
+  cursor: pointer;
+}
+
+.mat-header-row {
+  background-color: #fafafa !important;
+}
+
+/* Classes comuns na aplicação */
+
+// Para centralizar componentes de formulário
+.forms {
+  display: grid;
+  grid-template-columns: 52rem;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding-bottom: 50px;
+  margin: 20px;
+}
+
+.container-form {
+  display: flex;
+  justify-content: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.item-form {
+  width: 100%;
+}
+
+.mat-card {
+  width: 50%;
+  padding: 1.5rem !important;
+}
+
+.mat-simple-snackbar span {
+  margin: auto;
+  text-align: center;
+}
+
+.mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
+  border-color: #ff9800 !important;
+}
+
+.mat-radio-button.mat-accent .mat-radio-inner-circle {
+  background-color: #ff9800 !important;
+}
+
+.datepicker-sgo {
+  font-size: 20px;
+  color: #43a047;
+}
+
+.file-sgo {
+  color: #ff9800;
+}
+
+.file-sgo:hover {
+  text-decoration: underline;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.fury-list-header {
+  padding: 0 1rem;
+}
+
+.text-title {
+  font-size: 20px;
+  color: rgba(0,0,0,0.87);
+  font-weight: 500;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.icon-search {
+  margin-right: 1rem;
+  font-size: 21px !important;
+}

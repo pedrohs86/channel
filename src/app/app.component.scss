@@ -1,0 +1,53 @@
+.right-tool {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.toolbar {
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+}
+
+.example-container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+h1.example-app-name {
+  margin-left: 8px;
+  color: white !important;
+}
+
+.example-sidenav-container {
+  flex: 1;
+}
+
+.example-is-mobile .example-sidenav-container {
+  flex: 1 0 auto;
+}
+
+.btn-logout-layout {
+  color: white !important;
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-content: flex-end;
+}
+
+.router-outlet {
+  padding: 20px;
+  height: 100%;
+}
+
+.mat-drawer-content {
+  overflow: auto;
+  padding-bottom: 30px;
+}

@@ -1,0 +1,30 @@
+<mat-card-title style="margin-top: 1rem;"> Dados da conta </mat-card-title>
+<form [formGroup]="form">
+  <mat-form-field>
+    <mat-label>E-mail</mat-label>
+    <input matInput required formControlName="email" autocomplete="off" type="text" maxlength="50">
+    <mat-error id="error-cnpj-required">
+      Informe um e-mail válido.
+    </mat-error>
+  </mat-form-field>
+  <div fxLayout="row" fxLayoutAlign="space-between center">
+    <mat-form-field style="width: 45%;">
+      <mat-label>Senha</mat-label>
+      <input matInput required formControlName="password" autocomplete="off" type="password" minlength="6" maxlength="15">
+      <mat-hint>
+        Digite sua senha com 6 a 15 caracteres.
+      </mat-hint>
+      <mat-error id="error-cnpj-required" *ngIf="form.get('password')?.invalid">
+        Senha inválida
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field style="width: 45%;">
+      <mat-label>Repita a senha</mat-label>
+      <input matInput formControlName="confirmPassword" autocomplete="off" type="password" maxlength="15" required>
+      <mat-error>
+        Repita corretamente a senha informada.
+      </mat-error>
+    </mat-form-field>
+  </div>
+</form>
