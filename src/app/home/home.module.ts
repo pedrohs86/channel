@@ -4,7 +4,6 @@ import { RouterModule } from '@angular/router';
 import { SingUpComponent } from './singup/singup.component';
 import { HomeRoutingModule } from './home.routing.module';
 import { HomeComponent } from './home.component';
-import { SingUpService } from './singup/singup.service';
 import { SharedModule } from '../shared/shared.module';
 import { DadosContaComponent } from './singup/dados-conta/dados-conta.component';
 import { DadosContatoComponent } from './singup/dados-contato/dados-contato.component';

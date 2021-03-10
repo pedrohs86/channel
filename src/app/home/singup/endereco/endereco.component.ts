@@ -48,7 +48,7 @@ export class EnderecoComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.form.get('cep')?.setAsyncValidators(checkUserCEP(this.signUpService, 500, this.form.get('cep')?.value))
+    this.form.get('cep')?.setAsyncValidators(checkUserCEP(this.signUpService, 500, this.form.get('cep')?.value, this.form, this.estados))
   }
 
 }
