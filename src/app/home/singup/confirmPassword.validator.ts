@@ -5,7 +5,7 @@ export const confirmPassword = (formGroup: any): ValidatorFn | null => {
   const password = formGroup.get('password')?.value;
   const confirmPassword = formGroup.get('confirmPassword')?.value;
 
-    if (confirmPassword.trim() + password.trim()) {
+    if (!!password && !!confirmPassword && (confirmPassword.trim() + password.trim())) {
       let returnValue: any = {};
       if(confirmPassword === password) {
         formGroup.get('confirmPassword')?.setErrors(null)
