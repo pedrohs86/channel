@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-03-10T22:28:05.448Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.82 Safari/537.36" etag="iaxMbmx8wgjIQXp3WlXn" version="14.4.6" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2021-03-11T02:46:32.141Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.82 Safari/537.36" etag="cpcteT1Db0tzSMb7DdQ-" version="14.4.6" type="github" pages="2">
   <diagram name="Page-1" id="e7e014a7-5840-1c2e-5031-d8a46d1fe8dd">
     <mxGraphModel dx="3231" dy="1161" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="826" background="#ffffff" math="0" shadow="0">
       <root>
@@ -58,35 +58,11 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="4" value="O diagrama de componentes" style="swimlane;whiteSpace=wrap" parent="1" vertex="1">
-          <mxGeometry x="724.5" y="128" width="280" height="570" as="geometry" />
-        </mxCell>
-        <mxCell id="33" value="process&#xa;command" style="" parent="4" vertex="1">
-          <mxGeometry x="90" y="405" width="110" height="50" as="geometry" />
-        </mxCell>
-        <mxCell id="38" value="" style="ellipse;shape=endState;fillColor=#000000;strokeColor=#ff0000" parent="4" vertex="1">
-          <mxGeometry x="130" y="500" width="30" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="39" value="" style="endArrow=open;strokeColor=#FF0000;endFill=1;rounded=0" parent="4" source="33" target="38" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="okdf8_bMquM8-PgtqrsZ-41" value="O diagrama de código" style="swimlane;whiteSpace=wrap" vertex="1" parent="1">
-          <mxGeometry x="1004.5" y="128" width="280" height="570" as="geometry" />
-        </mxCell>
-        <mxCell id="okdf8_bMquM8-PgtqrsZ-42" value="process&#xa;command" style="" vertex="1" parent="okdf8_bMquM8-PgtqrsZ-41">
-          <mxGeometry x="90" y="405" width="110" height="50" as="geometry" />
-        </mxCell>
-        <mxCell id="okdf8_bMquM8-PgtqrsZ-45" value="" style="ellipse;shape=endState;fillColor=#000000;strokeColor=#ff0000" vertex="1" parent="okdf8_bMquM8-PgtqrsZ-41">
-          <mxGeometry x="130" y="500" width="30" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="okdf8_bMquM8-PgtqrsZ-46" value="" style="endArrow=open;strokeColor=#FF0000;endFill=1;rounded=0" edge="1" parent="okdf8_bMquM8-PgtqrsZ-41" source="okdf8_bMquM8-PgtqrsZ-42" target="okdf8_bMquM8-PgtqrsZ-45">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
   <diagram id="UEmgLj5CO5UQuqV_FKOi" name="Page-2">
-    <mxGraphModel dx="2062" dy="1161" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2062" dy="1100" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="IdVUxwXCryskV3fDPnwa-0" />
         <mxCell id="IdVUxwXCryskV3fDPnwa-1" parent="IdVUxwXCryskV3fDPnwa-0" />
@@ -218,14 +194,6 @@
         <mxCell id="j1ngPnl92M7ZFoxtb0Qh-8" value="Usar" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="j1ngPnl92M7ZFoxtb0Qh-7">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-      </root>
-    </mxGraphModel>
-  </diagram>
-  <diagram id="EFYhPV1As9j_-SzmH9Ou" name="Page-3">
-    <mxGraphModel dx="2062" dy="1161" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
-      <root>
-        <mxCell id="E3tqlQMraDSPguhyxJOn-0" />
-        <mxCell id="E3tqlQMraDSPguhyxJOn-1" parent="E3tqlQMraDSPguhyxJOn-0" />
       </root>
     </mxGraphModel>
   </diagram>
